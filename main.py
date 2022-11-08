@@ -1,3 +1,6 @@
+# used in the initial part of the assignment only, for testing purposes
+
+
 #from fastapi import FastAPI
 #app = FastAPI()
 
@@ -7,9 +10,9 @@
 
 
 
-###inserted new code here from task 3
+### inserted new code here from task 3
 
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException  # why are we importing Query? it is not used.
 from pydantic import BaseModel
 from model import predict, convert
 
@@ -23,7 +26,7 @@ class StockIn(BaseModel):
 class StockOut(StockIn):
     forecast: dict
 
-@app.post("/predict", response_model=StockOut, status_code=200)
+@app.post("/predict", response_model=StockOut, status_code=200)  
 def get_prediction(payload: StockIn):
     ticker = payload.ticker
     days = payload.days

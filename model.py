@@ -28,7 +28,7 @@ def train(ticker="MSFT"):
     joblib.dump(model, Path(BASE_DIR).joinpath(f"{ticker}.joblib"))
 
 
-def predict(ticker="MSFT", days=7):
+def predict(ticker="MSFT", days=7):   
     model_file = Path(BASE_DIR).joinpath(f"{ticker}.joblib")
     if not model_file.exists():
         return False
@@ -55,7 +55,7 @@ def convert(prediction_list):
         output[date] = data["trend"]
     return output
 
-
+#disable automatic running when calling model.py from the command line
 ###if __name__ == "__main__":
     #parser = argparse.ArgumentParser(description='Predict')
     #parser.add_argument('--ticker', type=str, default='MSFT', help='Stock Ticker')
