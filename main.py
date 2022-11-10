@@ -9,7 +9,6 @@
  #   return {"ping": "pong!"}
 
 
-
 ### inserted new code here from task 3
 
 from fastapi import FastAPI, Query, HTTPException  # why are we importing Query? it is not used.
