@@ -1,5 +1,13 @@
 # stock-predictor
- stock-predictor by JG
+ W13 - Build Container Image by JG
+
+## Deliverables
+
+- Link to the feature branch of your project repository
+    - `Dockerfile`
+
+
+W12 - stock-predictor by JG
 
 curl -X 'POST' \
   'http://localhost:8000/predict' \
